@@ -1,11 +1,30 @@
+use std::io;
+
 fn main() {
-    let number = 3;
-    let condition = true;
-    if number < 5 {
-        println!("Number is less than 5")
-    } else {
-        println!("Number is greater than or equal to 5");
+    let mut loop_count = 0;
+    let result = loop {
+        loop_count += 1;
+        println!("This text is being looped over :O");
+        if loop_count == 12 {
+            break loop_count * 10;
+        }
+    };
+    println!("The result is {result}");
+
+    //completely different exercises lol
+
+    let mut number = String::new();
+    println!("How long should the countdown be? ");
+    io::stdin()
+        .read_line(&mut number)
+        .expect("Failed to read input");
+    let mut number: u32 = number
+        .trim()
+        .parse()
+        .expect("Please insure the coundown is a positive number!");
+    while number != 0 {
+        println!("{number}");
+        number -= 1;
     }
-    let pleiades = if condition { 7 } else { 6 };
-    println!("pleiades is {pleiades}");
+    println!("Liftoff!!")
 }
