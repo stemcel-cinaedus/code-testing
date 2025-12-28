@@ -29,10 +29,8 @@ fn main() {
     println!("Liftoff!!");
 
     let uwu = [20, 40, 60, 80, 100];
-    let mut index = 0;
 
-    while index < 5 {
-        println!("The value of uwu is {}", uwu[index]);
-        index += 1;
+    for element in uwu {
+        println!("The value of uwu in this iteration of the loop is {element}")
     }
 }
