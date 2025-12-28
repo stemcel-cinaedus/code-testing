@@ -26,5 +26,13 @@ fn main() {
         println!("{number}");
         number -= 1;
     }
-    println!("Liftoff!!")
+    println!("Liftoff!!");
+
+    let uwu = [20, 40, 60, 80, 100];
+    let mut index = 0;
+
+    while index < 5 {
+        println!("The value of uwu is {}", uwu[index]);
+        index += 1;
+    }
 }
