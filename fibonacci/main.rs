@@ -14,7 +14,7 @@ fn main() {
         .trim()
         .parse()
         .expect("Could not read the desired digit to calculate!");
-    while loop_exit <= length {
+    while loop_exit < length - 1 {
         z = x + y;
         if x <= y {
             x = z
