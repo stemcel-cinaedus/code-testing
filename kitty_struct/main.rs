@@ -30,10 +30,8 @@ fn main() {
         collection.push(birth_kitten(new_cat_fur, new_cat_name));
         
         println!("Would you like to keep adding cats? Answer with Y or N");
-        let mut answer = io::stdin().read_line(&mut answer).expect("Couldn't read input");
-        let mut answer = answer.to_string();
-        let answer = answer.trim().to_uppercase();
-        match &answer[..] {
+        io::stdin().read_line(&mut answer).expect("Couldn't read input");
+        match answer.trim().to_uppercase().as_str() {
             "Y" => continue,
             "N" => break,
             _ => println!("Invalid input"),
